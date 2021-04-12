@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% block content %}
+<div class="jumbotron">
+  <h1>Chtěli byste se podělit svojí pozicí?</h1>
+  <p>Vyplňte formulář níže:</p>
+  <form method="POST">
+      {{ form.hidden_tag() }}
+      {{ form.name.label }}
+      {{ form.name() }}
+      {{ form.prejudice.label }}
+      {{ form.prejudice() }}
+      {{ form.reality.label }}
+      {{ form.reality() }}
+      {{ form.day_in_life.label }}
+      {{ form.day_in_life() }}
+      {{ form.salary.label }}
+      {{ form.salary() }}
+      {{ form.education.label }}
+      {{ form.education() }}
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}
