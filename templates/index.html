@@ -1,14 +1,15 @@
 {% extends "base.html"%}
 {% block content %}
-  <main class="px-3">
-    <h1>Co za práci?</h1>
-    <p class="lead">Najdi si práci podle skutečných popisů od lidí, kteří jí vykonávají.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Objev svou novou práci</a>
-    </p>
-  </main>
-
-  <footer class="mt-auto text-white-50">
-    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-  </footer>
+<div class="container">
+            <div class="jumbotron" style="margin-top:47px;">
+                <div></div>
+                <h1 class="text-center">Co za práci?</h1>
+                <p class="text-center">Popisy pracovních pozic od lidí, kteří je opravdu vykonávají</p>
+                <p class="text-truncate text-center">
+                    <a class="btn btn-primary" role="button" href="{{url_for('worklist')}}" target="_parent">Přejít na seznam pozic</a>
+                    <a class="btn btn-primary" role="button" href="#" target="_parent" style="margin:23px">Kam jsem se to dostal?</a>
+                </p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
