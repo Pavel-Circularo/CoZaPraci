@@ -1,0 +1,6 @@
+<ul>
+    {% for job in job_list  %}
+        <li><a href="/jobs_app/job/{{job.id}}">{{job.job_name}}</a></li>
+    {% endfor %}
+</ul>
+<br>
