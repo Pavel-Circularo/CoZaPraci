@@ -2,13 +2,21 @@
 
 {% block content %}
 
-<h1>List of Jobs</h1>
-
-<ul>
-    {% for job in jobs_list  %}
-        <li><a href="/jobs/job/{{job.id}}">{{job.job_name}}</a></li>
-    {% endfor %}
-</ul>
-<br>
+<div class="container" style="margin-top: 20px;">
+    <section class="highlight-clean" style="background: #14213d;">
+        <div class="container">
+            <div class="job-list" style="height: 150px">
+                <h2 class="text-center" style="color: #DD7B21;font-family: Audiowide, serif;font-size: 45px;">Seznam pozic</h2>
+                <p class="text-center" style="color: #8F9799;font-family: Aldrich, sans-serif;font-size: 18px;">Vyber si níže pozici, která tě zajímá a rozklikni pro detail a více info.&nbsp;</p>
+        
+                {% for job in jobs_list %}
+                <ul style="color: #dd7b21;font-family: Raleway, sans-serif;background: #14213d;margin-right: 40px;border-style: none;font-size: 20px;">
+                    <li ><a class="job-link" href="/jobs/job/{{job.id}}">{{job.job_name}}</a></li>
+                </ul>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
 
 {% endblock %}

@@ -2,8 +2,30 @@
 
 {% block content %}
 
-<h2>Detail view for Job</h2>
-{{job.job_name}}<br>
-{{job.stereotype}}<br>
+<div class="container" style="margin-top: 20px;">
+    <div style="margin-bottom: 50px;margin-top: 50px;">
+        <h1 class="text-center" style="color: #dd7b21;font-family: Raleway, sans-serif;">{{job.job_name}}</h1>
+    </div>
+    <div id="job-desc">
+        <div id="stereotype" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Co si lidé myslí, že je tvojí náplní práce?</span>
+            <p style="color: #8f9799;">{{job.stereotype}}&nbsp;</p>
+        </div>
+        <div id="reality" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Co je opravdu tvojí náplní práce?</span>
+            <p style="color: #8f9799;">{{job.reality}}</p>
+        </div>
+        <div id="day_in_life" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Popiš svůj pracovní den.</span>
+            <p style="color: #8f9799;">{{job.day_in_life}}</p>
+        </div>
+        <div id="income" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Kolik vyděláváš měsíčně?</span>
+            <p style="color: #8f9799;">{{job.income}}</p>
+        </div>
+        <div id="education" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Je k tvé práci potřeba vzdělání?</span>
+            <p style="color: #8f9799;">{{job.education}}</p>
+        </div>
+        <div id="others" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Další užitečné informace.</span>
+            <p style="color: #8f9799;">{{job.others}}</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

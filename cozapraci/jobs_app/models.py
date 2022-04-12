@@ -11,3 +11,5 @@ class Job(models.Model):
     others = models.TextField()
     name = models.CharField(max_length=30)
 
+    def __str__(self):
+        return f"{self.job_name}"

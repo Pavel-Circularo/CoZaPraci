@@ -4,6 +4,7 @@ from django.urls import reverse,reverse_lazy
 from django.views.generic import TemplateView, CreateView,DetailView, FormView,ListView,UpdateView,DeleteView
 from jobs_app.models import Job
 from . import forms
+from random import randint
 
 # Create your views here.
 class HomeView(TemplateView):
