@@ -10,6 +10,7 @@ class Job(models.Model):
     education = models.TextField()
     others = models.TextField()
     name = models.CharField(max_length=30)
+    is_approved = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.job_name}"
