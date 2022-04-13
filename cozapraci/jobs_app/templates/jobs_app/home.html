@@ -18,7 +18,7 @@
         </div>
         <div class="buttons">
             <a class="btn btn-primary" role="button" href="{% url 'jobs_app:list_jobs' %}" style="width: 140px;color: #DD7B21;font-size: 13px;border-radius: 30px;background: #14213d;border-style: solid;font-family: Aldrich, sans-serif;">Seznam</a>
-            <a class="btn btn-primary" role="button" href="#" style="width: 140px;color: #DD7B21;font-size: 13px;border-radius: 30px;background: #14213d;border-style: solid;font-family: Aldrich, sans-serif;">Náhodná</a>
+            <a class="btn btn-primary" role="button" href="{% url 'jobs_app:random' %}" style="width: 140px;color: #DD7B21;font-size: 13px;border-radius: 30px;background: #14213d;border-style: solid;font-family: Aldrich, sans-serif;">Náhodná</a>
         </div>
     </div>
 </section>
@@ -33,6 +33,6 @@
         </div>
     </div>
 </section>
-
+<a href="/jobs/job/{{job.random_int}}">Get a random job</a>
 {% endblock content %}
 
