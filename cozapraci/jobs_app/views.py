@@ -31,9 +31,12 @@ class JobDetailView(DetailView):
 def random_view(request):
     #all_jobs = Job.objects.all()
     #random_job = all_jobs[randint(1,len(all_jobs)-1)]
-
-    pks = Job.objects.values_list('pk', flat=True)
-    random_pk = choice(pks)
-    random_job = Job.objects.get(pk=random_pk)
-    context = {"job" : random_job}
+    run = True
+    while run == True:
+        pks = Job.objects.values_list('pk', flat=True)
+        random_pk = choice(pks)
+        random_job = Job.objects.get(pk=random_pk)
+        if random_job.is_approved == 1:
+            run = False
+            context = {"job" : random_job}
     return render(request, 'jobs_app/job_detail.html', context=context)
