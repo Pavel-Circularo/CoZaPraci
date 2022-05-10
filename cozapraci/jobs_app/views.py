@@ -29,8 +29,7 @@ class JobDetailView(DetailView):
     model = Job
 
 def random_view(request):
-    #all_jobs = Job.objects.all()
-    #random_job = all_jobs[randint(1,len(all_jobs)-1)]
+    """this function returs random approved job from database"""
     run = True
     while run == True:
         pks = Job.objects.values_list('pk', flat=True)

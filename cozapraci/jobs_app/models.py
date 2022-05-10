@@ -6,7 +6,7 @@ class Job(models.Model):
     stereotype = models.TextField()
     reality = models.TextField()
     day_in_life = models.TextField()
-    income = models.IntegerField()
+    income = models.CharField(max_length=150)
     education = models.TextField()
     others = models.TextField()
     name = models.CharField(max_length=30)
