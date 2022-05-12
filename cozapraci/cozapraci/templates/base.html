@@ -1,4 +1,5 @@
 {% load static %}
+{% load unicorn %}
 
 <html lang="en">
 <head>
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="shortcut icon" href="{% static 'jobs_app/cozapraci-favicon-no_background.png' %}" type="image/x-icon">
     <title>Co za práci?</title>
+    {% unicorn_scripts %}
 </head>
 <body style="background: #14213d;">
     <nav class="navbar navbar-light navbar-expand-md" style="background: #14213d;border-bottom: 1px solid #8F9799;">

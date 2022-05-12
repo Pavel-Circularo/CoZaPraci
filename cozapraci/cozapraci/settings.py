@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_unicorn',
+    'unicorn',
     'jobs_app.apps.JobsAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',

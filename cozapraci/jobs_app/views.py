@@ -1,4 +1,6 @@
 from dataclasses import fields
+from re import template
+from django_unicorn.components import UnicornView
 from django.shortcuts import render
 from django.urls import reverse,reverse_lazy
 from django.views.generic import TemplateView, CreateView,DetailView, FormView,ListView,UpdateView,DeleteView
@@ -24,6 +26,9 @@ class JobListView(ListView):
     model = Job
     query_set = Job.objects.order_by("job_name")
     context_object_name = 'jobs_list'
+
+class JobSearchView(TemplateView):
+    template_name = "jobs_app/job_list2.html"
 
 class JobDetailView(DetailView):
     model = Job

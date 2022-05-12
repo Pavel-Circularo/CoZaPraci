@@ -1,0 +1,20 @@
+
+<div>
+    <input type="text" class="text-center form-control" style="width: 50%; margin:auto" unicorn:model="job" placeholder="Název pozice" id="job-name"></input>
+
+    <p>
+        {% if jobs %}
+    <ul>
+        {% for s in jobs%}
+        <ul style="color: #dd7b21;font-family: Raleway, sans-serif;background: #14213d;margin-right: 40px;border-style: none;font-size: 20px;">
+            <li ><a class="job-link" href="/jobs/job/{{s.id}}">{{s.job_name}}</a></li>
+        </ul>
+        {% endfor %}
+    </ul>
+
+    <button unicorn:click="clear_jobs" style="color: #dd7b21;background: #14213d;width: 140px;height: 50px;margin-top: 30px;border-radius: 30px;border: 3px solid #dd7b21;border-bottom-style: solid;font-size: 20px;font-family: Raleway, sans-serif;">Vymazat</button>
+        {% else %}
+            <p class="text-center" style="color: #8F9799;font-family: Aldrich, sans-serif;font-size: 18px;">Zatím žádné výsledky pro hledanou pozici</p>
+        {% endif %}
+    </p>
+</div>

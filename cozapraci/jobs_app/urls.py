@@ -1,5 +1,6 @@
-from django.urls import path
-from .views import HomeView,ThankYouView,JobCreateView,JobDetailView,JobListView,random_view
+from django.urls import path, include
+from .views import HomeView,ThankYouView,JobCreateView,JobDetailView,JobListView,random_view, JobSearchView
+from .components.joblist import JoblistView
 
 app_name = "jobs_app"
 
@@ -9,5 +10,5 @@ urlpatterns = [
     path("create_job/",JobCreateView.as_view(),name="create_job"),
     path("list_jobs/",JobListView.as_view(),name="list_jobs"),
     path("job/<int:pk>",JobDetailView.as_view(),name="job_detail"),
-    path("random/",random_view, name="random")
+    path("random/",random_view, name="random"),
 ]
