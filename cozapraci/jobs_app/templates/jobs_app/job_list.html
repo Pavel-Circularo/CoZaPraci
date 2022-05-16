@@ -15,7 +15,7 @@
                 </div>
                 {% for job in jobs_list %}
                 {% if job.is_approved == 1 %}
-                    <ul style="color: #dd7b21;font-family: Raleway, sans-serif;background: #14213d;margin-right: 40px;border-style: none;font-size: 20px;">
+                    <ul class="job-list-item">
                         <li ><a class="job-link" href="/jobs/job/{{job.id}}">{{job.job_name}}</a></li>
                     </ul>
                 {% endif %}

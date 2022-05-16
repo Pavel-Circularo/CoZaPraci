@@ -35,12 +35,9 @@ class JobDetailView(DetailView):
 
 def random_view(request):
     """this function returs random approved job from database"""
-    run = True
-    while run == True:
-        pks = Job.objects.values_list('pk', flat=True)
-        random_pk = choice(pks)
-        random_job = Job.objects.get(pk=random_pk)
-        if random_job.is_approved == 1:
-            run = False
-            context = {"job" : random_job}
+
+    approved_jobs = Job.objects.values_list("pk",flat=True).filter(is_approved=1)
+    random_job = Job.objects.get(pk=choice(approved_jobs))
+    context = {"job" : random_job}
+
     return render(request, 'jobs_app/job_detail.html', context=context)

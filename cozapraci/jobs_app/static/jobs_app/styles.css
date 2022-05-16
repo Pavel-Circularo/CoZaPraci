@@ -131,29 +131,29 @@ form#contact-form {
 
 @media (min-width: 768px) {
     li {
-      width: 40%;
+        width: 40%;
     }
-  }
+}
 
 @media (min-width: 500px) {
-.back-butt {
-    margin-right: 10px;
-}
+    .back-butt {
+        margin-right: 10px;
+    }
 }
 
 @media (min-width: 576px) {
-.next-butt {
-    margin-left: 10px;
-}
+    .next-butt {
+        margin-left: 10px;
+    }
 }
 
 @media (max-width: 400px) {
-.back-butt {
-    margin-bottom: 10px;
-}
+    .back-butt {
+        margin-bottom: 10px;
+    }
 }
 
-.job-link{
+.job-link {
     text-decoration: none;
     color: #dd7b21;
     font-family: Raleway, sans-serif;
@@ -162,6 +162,13 @@ form#contact-form {
     border-style: none;
     font-size: 20px;
     text-align: center;
-  }
-  
-  
+}
+
+.job-list-item {
+    color: #dd7b21;
+    font-family: Raleway, sans-serif;
+    background: #14213d;
+    margin-right: 40px;
+    border-style: none;
+    font-size: 20px;
+}
