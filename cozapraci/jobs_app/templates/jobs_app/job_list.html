@@ -16,7 +16,7 @@
                 {% for job in jobs_list %}
                 {% if job.is_approved == 1 %}
                     <ul class="job-list-item">
-                        <li ><a class="job-link" href="/jobs/job/{{job.id}}">{{job.job_name}}</a></li>
+                        <li ><a class="job-link" href="/job/{{job.id}}">{{job.job_name}}</a></li>
                     </ul>
                 {% endif %}
                 {% endfor %}
