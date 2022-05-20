@@ -13,12 +13,19 @@
                 <div style="border-bottom: 1px solid #8F9799; margin-bottom: 20px;">
                     {% unicorn "joblist" %}
                 </div>
-                {% for job in jobs_list %}
-                {% if job.is_approved == 1 %}
-                    <ul class="job-list-item">
-                        <li ><a class="job-link" href="/job/{{job.id}}">{{job.job_name}}</a></li>
-                    </ul>
-                {% endif %}
+                {% for job in jobs_list%}
+                    
+                    <!-- this could have been more elegant but for some reason the jobs_list is not sent to the template filtered -->
+                    {% if job.name and job.is_approved == 1%}
+                        <ul class="job-list-item">
+                            <li ><a class="job-link" href="/job/{{job.id}}">{{job.job_name}} (od {{job.name}})</a></li>
+                        </ul>
+                    {% elif job.is_approved == 1 %}
+                        <ul class="job-list-item">
+                            <li ><a class="job-link" href="/job/{{job.id}}">{{job.job_name}}</a></li>
+                        </ul>
+                    {% endif %}
+
                 {% endfor %}
             </div>
         </div>

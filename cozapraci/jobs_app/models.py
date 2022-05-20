@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Job(models.Model):
     job_name = models.CharField(max_length=30)
     stereotype = models.TextField()
@@ -9,7 +8,7 @@ class Job(models.Model):
     income = models.CharField(max_length=150)
     education = models.TextField()
     others = models.TextField()
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30, blank=True)
     is_approved = models.BooleanField(default=False)
 
     def __str__(self):

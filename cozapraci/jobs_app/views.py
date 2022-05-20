@@ -24,11 +24,8 @@ class JobCreateView(CreateView):
 
 class JobListView(ListView):
     model = Job
-    query_set = Job.objects.order_by("job_name")
+    query_set = Job.objects.order_by("job_name").filter(is_approved=1)
     context_object_name = 'jobs_list'
-
-class JobSearchView(TemplateView):
-    template_name = "jobs_app/job_list2.html"
 
 class JobDetailView(DetailView):
     model = Job

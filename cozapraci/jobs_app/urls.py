@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import HomeView,ThankYouView,JobCreateView,JobDetailView,JobListView,random_view, JobSearchView
+from .views import HomeView,ThankYouView,JobCreateView,JobDetailView,JobListView,random_view
 from .components.joblist import JoblistView
 
 app_name = "jobs_app"
