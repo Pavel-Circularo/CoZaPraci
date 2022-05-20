@@ -4,6 +4,7 @@
 __pycache__
 db.sqlite3
 media
+key.txt
 
 .idea/**/workspace.xml
 .idea/**/tasks.xml

@@ -6,8 +6,6 @@ from jobs_app.models import Job
 class JoblistView(UnicornView):
     job = ""
     all_jobs = Job.objects.exclude(is_approved=0)
-    job_names = [s.job_name for s in all_jobs]
-    job_ids = [s.id for s in all_jobs]
 
     def clear_jobs(self):
         self.job = ""

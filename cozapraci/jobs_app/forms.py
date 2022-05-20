@@ -1,5 +1,4 @@
-from django import forms
-from django.forms import ModelForm, TextInput, EmailInput
+from django.forms import ModelForm
 
 from .models import Job
 

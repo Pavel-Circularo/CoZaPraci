@@ -1,15 +1,11 @@
-from dataclasses import fields
-from re import template
 from django_unicorn.components import UnicornView
 from django.shortcuts import render
-from django.urls import reverse,reverse_lazy
+from django.urls import reverse_lazy
 from django.views.generic import TemplateView, CreateView,DetailView, FormView,ListView,UpdateView,DeleteView
 from jobs_app.models import Job
 from . import forms
-from random import randint
 from random import choice
 
-# Create your views here.
 class HomeView(TemplateView):
     template_name = 'jobs_app/home.html'
 
@@ -19,7 +15,6 @@ class ThankYouView(TemplateView):
 class JobCreateView(CreateView):
     model = Job
     form_class = forms.JobForm
-    #fields = "__all__"
     success_url = reverse_lazy("jobs_app:thank_you")
 
 class JobListView(ListView):
