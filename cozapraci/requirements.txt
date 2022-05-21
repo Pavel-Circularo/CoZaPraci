@@ -27,4 +27,3 @@ traitlets==5.2.0
 tzdata==2021.5
 unicorn==1.0.3
 wcwidth==0.2.5
-windows-curses
