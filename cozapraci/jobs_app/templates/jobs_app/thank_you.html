@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="highlight-clean" style="background: #14213d;">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center" style="color: #DD7B21;font-family: Audiowide, serif;font-size: 45px;">Díky za příspěvěk!</h2>
+            <p class="text-center" style="color: #8F9799;font-family: Aldrich, sans-serif;font-size: 18px;margin-bottom: 35px;">Po schválení bude přidán do seznamu pozic.</p>
+            <div style="text-align: center;">
+                <a href="{% url 'jobs_app:list_jobs' %}" class="btn btn-primary back-butt" data-bss-hover-animate="pulse" style="width: 200px;color: #DD7B21;font-size: 20px;border-radius: 30px;background: #14213d;font-family: Raleway, sans-serif;height: 48px;border: 3px solid #DD7B21;">Zpět na seznam</a>
+                <a href="{% url 'jobs_app:create_job' %}" class="btn btn-primary next-butt" data-bss-hover-animate="pulse" style="width: 200px;color: #DD7B21;font-size: 20px;border-radius: 30px;background: #14213d;font-family: Raleway, sans-serif;height: 48px;border: 3px solid #DD7B21;">Přidat další</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

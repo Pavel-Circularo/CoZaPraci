@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load unicorn %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 20px;">
+    <section class="highlight-clean" style="background: #14213d;">
+        <div class="container">
+            {% csrf_token %}
+            <div class="job-list" style="height: 150px">
+                <h2 class="text-center" style="color: #DD7B21;font-family: Audiowide, serif;font-size: 45px;">Seznam pozic</h2>
+                <p class="text-center" style="color: #8F9799;font-family: Aldrich, sans-serif;font-size: 18px;">Vyhledej pozici podle názvu nebo si vyber ze seznamu a rozklikni pro detail.&nbsp;</p>
+                <div style="border-bottom: 1px solid #8F9799; margin-bottom: 20px;">
+                    {% unicorn "joblist" %}
+                </div>
+                {% for job in jobs_list%}
+                    
+                    <!-- this could have been more elegant but for some reason the jobs_list is not sent to the template filtered -->
+                    {% if job.name and job.is_approved == 1%}
+                        <ul class="job-list-item">
+                            <li ><a class="job-link" href="/job/{{job.id}}">{{job.job_name}} (od {{job.name}})</a></li>
+                        </ul>
+                    {% elif job.is_approved == 1 %}
+                        <ul class="job-list-item">
+                            <li ><a class="job-link" href="/job/{{job.id}}">{{job.job_name}}</a></li>
+                        </ul>
+                    {% endif %}
+
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,174 @@
+.highlight-clean {
+    color: #313437;
+    background-color: #fff;
+    padding: 50px 0
+}
+
+.highlight-clean p {
+    color: #7d8285
+}
+
+.highlight-clean h2 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    padding-top: 0;
+    margin-top: 0;
+    color: inherit
+}
+
+.highlight-clean .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 25px
+}
+
+.highlight-clean .buttons {
+    text-align: center
+}
+
+.highlight-clean .buttons .btn {
+    padding: 16px 32px;
+    margin: 6px;
+    border: none;
+    background: #ddd;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: .9;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: .4px;
+    line-height: 1;
+    outline: 0
+}
+
+.highlight-clean .buttons .btn:hover {
+    opacity: 1
+}
+
+.highlight-clean .buttons .btn:active {
+    transform: translateY(1px)
+}
+
+.highlight-clean .buttons .btn-primary {
+    background-color: #055ada;
+    color: #fff
+}
+
+#contact h2 {
+    font-family: Raleway;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff
+}
+
+#contact p {
+    font-family: Raleway;
+    font-size: 16px;
+    line-height: 23px;
+    color: #7d8285;
+    text-align: center
+}
+
+label.control-label {
+    font-family: Raleway;
+    color: #f3f3f3;
+    font-weight: 700
+}
+
+.form-control {
+    width: 100%;
+    color: #dd7b21;
+    background: #14213d;
+    border-radius: 9px;
+    height: 50px;
+    border-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: #dd7b21;
+}
+
+button.btn.btn-success.btn-send {
+    background-color: #6e9a76;
+    border-color: #6e9a76;
+    width: 100px;
+    margin-bottom: 10px
+}
+
+div#contact {
+    background-color: #313131
+}
+
+#contact .intro {
+    max-width: 500px;
+    margin: 0 auto 40px
+}
+
+h2 {
+    font-size: 36px
+}
+
+form#contact-form {
+    margin-bottom: 20px
+}
+
+@media (min-width: 768px) {
+    a {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-light .navbar-nav .nav-link {
+        color: rgba(0, 0, 0, .55);
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 768px) {
+    li {
+        width: 40%;
+    }
+}
+
+@media (min-width: 500px) {
+    .back-butt {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 576px) {
+    .next-butt {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .back-butt {
+        margin-bottom: 10px;
+    }
+}
+
+.job-link {
+    text-decoration: none;
+    color: #dd7b21;
+    font-family: Raleway, sans-serif;
+    background: #14213d;
+    margin: auto;
+    border-style: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.job-list-item {
+    color: #dd7b21;
+    font-family: Raleway, sans-serif;
+    background: #14213d;
+    margin-right: 40px;
+    border-style: none;
+    font-size: 20px;
+}

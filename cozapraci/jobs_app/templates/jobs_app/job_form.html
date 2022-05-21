@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 20px;">
+    <div id="form-desc" style="margin-bottom: 50px;margin-top: 50px;">
+        <h1 class="text-center" style="color: #dd7b21;font-family: Raleway, sans-serif;">Sdílej svoji pozici</h1>
+        <p style="color: #8f9799;">Sdílej zkušenosti a informace pro ostatní, kteří přemýšlejí nad změnou kariéry a nevědí, co daná práce obnáší. Ve společnosti koluje mnoho stereotypů a předsudků, které můžeš potvrdit, vyvrátit nebo uvést na pravou míru.</p>
+    </div>
+    <div id="job-form">
+        <form method="POST" style="border-radius: 0px;">
+            {% csrf_token %}
+            <div id="job_name" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Co děláš za práci?&nbsp;</span>
+                <p style="color: #8f9799;">Doktor, policista, tramvaják, opravář komínů....</p>
+                {{form.job_name}}
+            </div>
+            <div id="stereotype" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Co si lidé myslí, že je tvojí náplní práce?&nbsp;</span>
+                <p style="color: #8f9799;">Jseš programátor? Tak to určitě hekneš facebook mojí ex!&nbsp;</p>
+                {{form.stereotype}}    
+            </div>
+            <div id="reality" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Co je opravdu tvojí náplní práce?&nbsp;</span>
+                <p style="color: #8f9799;">Popiš co děláš jako kdybys svojí práci vysvětloval někomu, kdo o podobné pozici v životě neslyšel.</p>
+                {{form.reality}}
+            </div>
+            <div id="day_in_life" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Popiš svůj pracovní den.</span>
+                <p style="color: #8f9799;">Zkus co nejpodrobněji popsat jak vypadá tvůj den od příchodu až po odchod. Pokud je každý den jiný, můžeš napsat v čem se hlavně liší a v čem naopak jsou dny stejné. Například pro práci v kanceláři: přijdu ke stolu, pustím počítač, udělám si kafe, protřídím maily....</p>
+                {{form.day_in_life}}
+            </div>
+            <div id="income" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Kolik vyděláváš měsíčně?</span>
+                <p style="color: #8f9799;">V každé práci jsou peníze až na prvním místě. Pro člověka, který se rozhoduje nad novou prací, toto bývá jeden z hlavních rozhodovacích faktorů. Udej přesné číslo, rozsah (50-60tis např.) nebo kolik je průměrná mzda v tvém oboru. Všechny příspěvky jsou anonymní (pokud samozřejmě dole neuvedeš své pravé jméno).</p>
+                {{form.income}}
+            </div>
+            <div id="education" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Je k tvé práci potřeba vzdělání?&nbsp;</span>
+                <p style="color: #8f9799;">Je třeba vysoká škola abys mohl/a na pozici v tomto odvětví pomýšlet? Kurz? Výcvik? Může ji dělat i samouk, který se učí z videí na YouTube?&nbsp;</p>
+                {{form.education}}
+            </div>
+            <div id="others" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Další užitečné informace.</span>
+                <p style="color: #8f9799;">Zde popiš cokoliv dalšího tě napadne k dané pozici a měl by vědět člověk, který by o ni uvažoval. Jedná se o fyzicky náročnou práci? Musíš mít na ni silný žaludek? Bývá většinou v tomto odvětví příjemná/toxická atmosféra lidí okolo? Aplikuješ co jsi se naučil/a ve škole? apod....</p>
+                {{form.others}}
+            </div>
+            <div id="job_name" style="margin-bottom: 20px;"><span style="color: #dd7b21;font-family: Raleway, sans-serif;font-size: 22px;">Tvé jméno.</span>
+                <p style="color: #8f9799;">Nebo přezdívka. Nebo herní nick. Nebo jméno emailu, který sis vytvořil/a když ti bylo 12 a pořád ho používáš (hustodemon666 apod....). Je to na tobě, pole je nepovinné.&nbsp;&nbsp;</p>
+                {{form.name}}
+            </div>
+            <div class="text-center" id="job_name-1" style="margin-bottom: 20px;">
+                <input class="btn btn-primary" data-bss-hover-animate="pulse" type="submit" value="Odeslat" style="color: #dd7b21;background: #14213d;width: 200px;height: 57px;margin-top: 50px;border-radius: 30px;border: 3px solid #dd7b21;border-bottom-style: solid;font-size: 23px;font-family: Raleway, sans-serif;">
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

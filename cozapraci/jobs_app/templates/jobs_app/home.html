@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{%block content%}
+
+<section class="highlight-clean" style="background: #14213d;">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center" style="color: #DD7B21;font-family: Audiowide, serif;font-size: 45px;">Co za práci?</h2>
+            <p class="text-center" style="color: #8F9799;font-family: Aldrich, sans-serif;font-size: 18px;">Portál na sdílení svých zážitků a zkušeností z vykonávání různých pracovních pozic. Od pracovní náplně, přes plat až po skutečnost, zda případný kandidát potřebuje mít vystudovanou vysokou školu.&nbsp;</p>
+        </div>
+    </div>
+</section>
+<section class="highlight-clean" style="background: #14213d;">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center" style="color: #DD7B21;font-family: Audiowide, serif;">Nevíš kde začít?</h2>
+            <p class="text-center" style="font-family: Aldrich, sans-serif;font-size: 18px;">Začni prohledávat seznam pozic nebo si jen zkus vyhledat náhodnou.</p>
+        </div>
+        <div class="buttons">
+            <a class="btn btn-primary" role="button" href="{% url 'jobs_app:list_jobs' %}" style="width: 140px;color: #DD7B21;font-size: 13px;border-radius: 30px;background: #14213d;border-style: solid;font-family: Aldrich, sans-serif;">Seznam</a>
+            <a class="btn btn-primary" role="button" href="{% url 'jobs_app:random' %}" style="width: 140px;color: #DD7B21;font-size: 13px;border-radius: 30px;background: #14213d;border-style: solid;font-family: Aldrich, sans-serif;">Náhodná</a>
+        </div>
+    </div>
+</section>
+<section class="highlight-clean" style="background: #14213d;">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center" style="color: #DD7B21;font-family: Audiowide, serif;"><strong>Chceš se podělit?</strong><br></h2>
+            <p class="text-center" style="font-family: Aldrich, sans-serif;font-size: 18px;">Pokud bys chtěl/a sdílet zkušenosti o svojí pracovní pozici, vyplň náš formulář a po schválení bude přidán do seznamu.<br></p>
+        </div>
+        <div class="buttons">
+            <a class="btn btn-primary" role="button" href="{% url 'jobs_app:create_job' %}" style="width: 180px;color: #DD7B21;font-size: 14px;border-radius: 30px;background: #14213d;border-style: solid;font-family: Aldrich, sans-serif;">Přidat pozici</a>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
