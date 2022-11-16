@@ -3,7 +3,7 @@
 CoZaPraci is a website where people can share their honest descriptions of their previous or current jobs as well as some of the stereotypes and misconceptions 
 connected with their profession.
 
-It is currently deployed at https://cozapraci.herokuapp.com/.
+It is currently deployed at [https://cozapraci.herokuapp.com/](https://cozapraci.up.railway.app/).
 
 The motivation for this project was a similar page called https://whatforwork.com/. Since I was not able to find something similar in czech language I decided 
 to build my own. 
